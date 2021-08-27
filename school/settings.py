@@ -16,7 +16,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['.chriswellschool.com', '137.184.21.39', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.chriswellschool.com', '206.81.3.164', 'localhost', '127.0.0.1']
 
 
 # Application definition
