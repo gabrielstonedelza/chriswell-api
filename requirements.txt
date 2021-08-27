@@ -13,6 +13,7 @@ daphne==3.0.2
 Django==3.2.3
 django-cleanup==5.2.0
 django-cors-headers==3.7.0
+django-crispy-forms==1.12.0
 djangorestframework==3.12.4
 gunicorn==20.1.0
 hiredis==2.0.0

@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'chriswellschool',
     'rest_framework',
     'corsheaders',
+    'crispy_forms',
     'django_cleanup.apps.CleanupConfig',
 ]
 
@@ -139,6 +140,7 @@ CORS_ALLOW_HEADERS = [
     'x-requested-with',
     'access-control-allow-origin',
 ]
+CSRF_FAILURE_VIEW = 'chriswellschool.views.csrf_failure'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)

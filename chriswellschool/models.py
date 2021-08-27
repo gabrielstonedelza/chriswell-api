@@ -32,7 +32,7 @@ class RegisterStudent(models.Model):
     phone = models.CharField(max_length=20, help_text="We will be reaching on this line")
     date_of_birth = models.CharField(max_length=20, help_text="Format = YY-MM-DD", blank=True)
     current_qualification = models.CharField(max_length=200, blank=True)
-    course = models.CharField(max_length=300)
+    course = models.CharField(max_length=300,choices=COURSES,default="MOBILE APP DEVELOPMENT")
     profile_picture = models.ImageField(upload_to="student_pics", blank=True)
     approved = models.BooleanField(default=False)
     slug = models.SlugField(max_length=100, default='', blank=True)

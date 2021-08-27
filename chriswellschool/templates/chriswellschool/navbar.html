@@ -1,0 +1,50 @@
+{% load static %}
+<nav class='navigationcontainer'>
+      <div class='navigationitems'>
+        <div class='forleft'>
+          <div class='logoandname'>
+            <img src="{% static 'chriswellschool/images/chriswell.png' %}" alt="" />
+          </div>
+            <h4 class='sitename'>CHRISWELL</h4>
+        </div>
+        <div class='forright'>
+          <ul>
+            <li>
+              <a href="{% url 'home' %}" class="sitelink">Home</a>
+            </li>
+            <li>
+              <a href="{% url 'registration' %}" class="sitelink">Register</a>
+            </li>
+            <li>
+              <a href="{% url 'courses' %}" class="sitelink">Courses</a>
+
+            </li>
+            <li>
+              <a href="{% url 'contactus' %}" class="sitelink">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <ul class='forsmall'>
+          <li title="Home">
+            <a href="{% url 'home' %}">
+              <i class="fas fa-home iconhome"></i>
+            </a>
+          </li>
+          <li title="Register">
+            <a href="{% url 'registration' %}" class="sitelink">
+              <i class="fas fa-address-book iconregister"></i>
+            </a>
+          </li>
+          <li title="Courses">
+            <a href="{% url 'courses' %}" class="sitelink">
+              <i class="fas fa-book iconcourses"></i>
+            </a>
+          </li>
+          <li title="Contact Us">
+            <a href="{% url 'contactus' %}" class="sitelink">
+              <i class="fas fa-phone iconcontact"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>

@@ -1,0 +1,104 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: monospace;
+  overflow-x: hidden;
+  line-height: 1.5;
+  background: #d3d3d3;
+}
+
+.butt {
+  cursor: pointer;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffb727), to(#ffdb27));
+  background-image: linear-gradient(to right, #ffb727, #ffdb27);
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+}
+
+.butt:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffdb27), to(primary_color));
+  background-image: linear-gradient(to right, #ffdb27, primary_color);
+  color: white;
+}
+
+.butt:focus {
+  border: none;
+  outline: none;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+form input {
+  padding: 10px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+  width: 100%;
+  padding: 10px;
+}
+
+form textarea:focus {
+  outline: none;
+}
+
+form .sendbutton {
+  cursor: pointer;
+  font-size: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f57803), to(#f5d020));
+  background-image: linear-gradient(to right, #f57803, #f5d020);
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+form .sendbutton:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
+  background-image: linear-gradient(to right, #f5d020, #f57803);
+  color: white;
+}
+
+form .sendbutton:focus {
+  border: none;
+  outline: none;
+}
+/*# sourceMappingURL=contactus.css.map */

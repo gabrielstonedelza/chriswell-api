@@ -8,6 +8,66 @@ from rest_framework import status
 from .process_mail import send_my_mail
 from django.conf import settings
 from rest_framework.views import APIView
+from django.shortcuts import render, redirect, get_object_or_404
+from .forms import StudentRegisterForm, ContactUsForm
+
+
+def csrf_failure(request, reason=""):
+    return render(request, "chriswellschool/403_csrf.html")
+
+
+def index(request):
+    return render(request, "chriswellschool/index.html")
+
+
+def registration(request):
+    form = StudentRegisterForm(request.POST, request.FILES)
+    if request.method == "POST":
+
+        if form.is_valid():
+            name = form.cleaned_data.get('name')
+            email = form.cleaned_data.get('email')
+            phone = form.cleaned_data.get('phone')
+            date_of_birth = form.cleaned_data.get('date_of_birth')
+            current_qualification = form.cleaned_data.get('current_qualification')
+            course = form.cleaned_data.get('course')
+            profile_picture = form.cleaned_data.get('profile_picture')
+
+            RegisterStudent.objects.create(name=name, email=email, phone=phone, date_of_birth=date_of_birth,
+                                           current_qualification=current_qualification, course=course,
+                                           profile_picture=profile_picture)
+            return redirect('home')
+    else:
+        StudentRegisterForm()
+
+    context = {
+        "form": form
+    }
+    return render(request, "chriswellschool/student_registration.html", context)
+
+
+def courses(request):
+    return render(request, "chriswellschool/courses.html")
+
+
+def contact_us(request):
+    if request.method == "POST":
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_data.get('name')
+            email = form.cleaned_data.get('email')
+            message = form.cleaned_data.get('message')
+            ContactUs.objects.create(name=name, email=email, message=message)
+            return redirect('home')
+
+    else:
+        form = ContactUsForm()
+
+    context = {
+        "form": form
+    }
+
+    return render(request, "chriswellschool/contactus.html", context)
 
 
 @api_view(['POST'])
