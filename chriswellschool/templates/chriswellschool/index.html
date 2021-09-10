@@ -1,148 +1,341 @@
-{% extends "chriswellschool/base.html" %}
+{% extends "chriswellschool/homebase.html" %}
 {% load static %}
 {% block title %}
 Chriswell
 {% endblock title %}
 {% block content %}
+<header class="v-header vid-container">
+  <div class="full-screen-video-wrap">
+    <video autoplay loop muted playsinline src="{% static 'chriswellschool/vids/pexels-mikhail-nilov-9198206.mp4' %}"
+      type="video/mp4"></video>
+  </div>
+  <div class="header-overlay"></div>
+  <div class="sub-nav">
+    <div class="logo-title">
+      <h2>CSBT</h2>
+    </div>
+    <div class="other-links">
+      <ul>
+        <li>
+          <a href="{% url 'home' %}" class="sitelink">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'registration' %}" class="sitelink">Register</a>
+        </li>
+        <li>
+          <a href="{% url 'courses' %}" class="sitelink">Courses</a>
+
+        </li>
+        <li>
+          <a href="{% url 'contactus' %}" class="sitelink">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <ul class='forsmall'>
+    <li title="Home">
+      <a href="{% url 'home' %}">
+        <i class="fas fa-home iconhome"></i>
+      </a>
+    </li>
+    <li title="Register">
+      <a href="{% url 'registration' %}" class="sitelink">
+        <i class="fas fa-address-book iconregister"></i>
+      </a>
+    </li>
+    <li title="Courses">
+      <a href="{% url 'courses' %}" class="sitelink">
+        <i class="fas fa-book iconcourses"></i>
+      </a>
+    </li>
+    <li title="Contact Us">
+      <a href="{% url 'contactus' %}" class="sitelink">
+        <i class="fas fa-phone iconcontact"></i>
+      </a>
+    </li>
+  </ul>
+  <div class="header-contents">
+    <h1>Chriswell School Of Business And Technology</h1>
+    <br>
+    <p>We have plenty of courses just for you to choose from.It doesn't matter where you are,you've got you covered.</p>
+    <a href="#">Register</a>
+  </div>
+</header>
 <div class='homecontainer'>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class='jumbotron0'>
-    <div class='jumbolists1'>
-      <h5 class="text-center">At ChrisWell School Of Business and Technology</h5>
-      <h5>You get to Pick your favorite course</h5>
-          <h5>Download all course list below</h5>
-          <div class='downloadlinks'>
-            <a
-              target="_blank"
-              href="{% static 'chriswellschool/documents/ABCE COURSE OUTLINE.docx' %}"
-              rel="noreferrer"
-              class='downloadlink1'
-            >
-              ABCE Course List
-            </a>
-            <a
-              target="_blank"
-              href="{% static 'chriswellschool/documents/GBCE COURSE OUTLINE.docx' %}"
-              rel="noreferrer"
-              class='downloadlink2'
-            >
-              GBCE Course List
-            </a>
-          </div>
+
+  <div class='skillcontainer'>
+    <div class='overlay'></div>
+    <div class='skiiltext'>
+      <div class='onoverlay'>
+        <h2>Learn a skill</h2>
+        <h3>Build your Portfolio</h3>
+        <h4>Get Hired</h4>
+        <span class='text'>
+          After learning a skill,Chriswell will help you build a professional<br />
+          portfolio that will get you hired by any organization out there.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class='entrycontainer'>
+    <h2>What we do</h2>
+    <br />
+    <div class="what-we-do">
+      <div class="box general-course z-depth-1-half">
+        <div class="for-img">
+          <img src="{% static 'chriswellschool/images/pexels-kampus-production-5940706.jpg' %}" alt="">
         </div>
-        <div class='poster'>
-          <img src="{% static 'chriswellschool/images/kiss.png' %}" alt="" />
+        <div class="content">
+          <h3 class="text-center">General Courses</h3>
+          <br>
+          <p>We offer course like <b>GBCE</b>,<b>ABCE</b> for all level of qualification.Hostel facilities available for
+            you.</p>
+          <br>
+          <a data-toggle="modal" data-target="#courses-modal">Read More</a>
         </div>
       </div>
-      <div class='skillcontainer'>
-      <div class='overlay'></div>
-      <div class='skiiltext'>
-        <div class='onoverlay'>
-          <h2>Learn a skill</h2>
-          <h3>Build your Portfolio</h3>
-          <h4>Get Hired</h4>
-          <span class='text'>
-            After learning a skill,Chriswell will help you build a professional<br/>
-            portfolio that will get you hired by any organization out there.
-          </span>
+      <div class="box graphic-designing z-depth-1-half">
+        <div class="for-img">
+          <img src="{% static 'chriswellschool/images/pexels-tranmautritam-326503.jpg' %}" alt="">
+        </div>
+        <div class="content">
+          <h3 class="text-center">Graphic Designing</h3>
+          <br>
+          <p>Get all the basics of photoshop at the tips of your hands,the course is taught by one photoshop expert.</p>
+          <br>
+          <a data-toggle="modal" data-target="#graphicDesigning">Read More</a>
+        </div>
+      </div>
+      <div class="box programming z-depth-1-half">
+        <div class="for-img">
+          <img src="{% static 'chriswellschool/images/pexels-pixabay-270348.jpg' %}" alt="">
+        </div>
+        <div class="content">
+          <h3 class="text-center">Development</h3>
+          <br>
+          <p>Programming with JavaScript,Python,Dart etc.We offer courses like mobile app and web app development</p>
+          <br>
+          <a data-toggle="modal" data-target="#programming">Read More</a>
         </div>
       </div>
     </div>
-      <div class='entrycontainer'>
-        <h2>Entry Requirements</h2>
-        <br />
-        <h3>GBCE</h3>
-        <br />
-        <ul>
-          <li>
+
+  </div>
+  <br />
+  <div class='footercontainer'>
+    <div class='mapcontact'>
+      <iframe title="school-location" id="gmap_canvas"
+        src="https://maps.google.com/maps?q=Amakom%20Traffic%20Light&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      <br />
+      <div class='locationcontact'>
+        <a class='amakom' title="Go to our facebook page"
+          href="https://web.facebook.com/Chriswell-School-of-Business-and-Technology-2071930816354515" target="_blank">
+          <img src="{% static 'chriswellschool/images/facebook.png' %}" alt="">
+        </a>
+        <h4 class='amakom'>
+          <img src="{% static 'chriswellschool/images/pin.png' %}" alt="">
+          Location : Amakom near the traffic light
+        </h4>
+        <h4 class='amakom'>
+          <img src="{% static 'chriswellschool/images/phone-call.png' %}" alt="">
+          Call us on 0322005922 / 0243639994
+        </h4>
+      </div>
+    </div>
+    <div class='cright'>
+      &copy;2021 Copyright:chriswellschool.com <small class='textmuted'>
+
+        Havens Software Development
+      </small>
+    </div>
+  </div>
+</div>
+
+<!-- Modal courses-->
+<div class="modal fade" id="courses-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          General Courses
+          <div class='downloadlinks'>
+            <a title="download document" style="font-size: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-weight: bold;
+      border-radius: 10px;
+      color: white;
+      transition: 1.5 ease;
+      background-image: linear-gradient(to right, #f5d020, #3b1f91);" target="_blank"
+              href="{% static 'chriswellschool/documents/ABCE COURSE OUTLINE.docx' %}" rel="noreferrer"
+              class='downloadlink1 mr-4'>
+              ABCE Course List
+              <i class="fas fa-file-download"></i>
+            </a>
+            <a title="download document" style="font-size: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-weight: bold;
+      border-radius: 10px;
+      color: white;
+      transition: 1.5 ease;
+      background-image: linear-gradient(to right, #f5d020, #3b1f91);" target="_blank"
+              href="{% static 'chriswellschool/documents/GBCE COURSE OUTLINE.docx' %}" rel="noreferrer"
+              class='downloadlink2 ml-4'>
+              GBCE Course List
+              <i class="fas fa-file-download"></i>
+            </a>
+          </div>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="text-center mb-4">Entry Requirements</h3>
+        <br>
+        <h4 class="text-center">GBCE</h4>
+        <ul class="list-group">
+          <li class="list-group-item">
             1. Junior High School leavers who wants direct entry into a degree
             programme.
           </li>
-          <li>
+          <li class="list-group-item">
             2. Applicants with D7, E8 and F9 can also apply for admission based
             on direct conversation between the Student and the Academic Board of
             the institution.
           </li>
-          <li>
+          <li class="list-group-item">
             3. Matured Applicants, Office Holders, Police and Army Officers
             shall be enrolled based on their Work Experience and Age. The
             applicant should not be less than 25 years.
           </li>
         </ul>
         <br />
-        <h3>Benefits</h3>
+        <h3 class="text-center">Benefits</h3>
         <br />
-        <ul>
-          <li>GBCE Certificate is Equivalent to WASSCE</li>
-          <li>
+        <ul class="list-group">
+          <li class="list-group-item">GBCE Certificate is Equivalent to WASSCE</li>
+          <li class="list-group-item">
             Direct entry into any university programme with Six (6) passes
             including: English Language, Mathematics, Integrated Science or
             Social Studies.
           </li>
-          <li>Job Placement</li>
-          <li>Industrial Attachment</li>
+          <li class="list-group-item">Job Placement</li>
+          <li class="list-group-item">Industrial Attachment</li>
         </ul>
+        <br>
+        <h3 class="text-center">ABCE</h3>
         <br />
-        <hr />
-        <br />
-        <h3>ABCE</h3>
-        <br />
-        <ul>
-          <li>
+        <ul class="list-group">
+          <li class="list-group-item">
             1.Applicants with 1st Degree in any specialized area but wants
             knowledge in Business and Information Technology Practice can also
             apply for admission.
           </li>
-          <li>
+          <li class="list-group-item">
             2. An applicant for admission to a Diploma Programme in the college
             must have CREDIT in THREE core subjects including (English Language,
             Mathematics, Social Studies and Integrated Science) and CREDIT in
             THREE Elective Subjects with aggregate 24 or better.
           </li>
-          <li>
+          <li class="list-group-item">
             3. Applicants with D7, E8 and F9 can also apply for admission based
             on direct conversation between the Student and the Academic Board of
             the institution.
           </li>
-          <li>
+          <li class="list-group-item">
             4. Matured Applicants, Office Holders, Police and Army Officers
             shall be enrolled based on their Work Experience and Age. The
             applicant should not be less than 25 years.
           </li>
         </ul>
         <br />
-        <h3>Benefits</h3>
+        <h3 class="text-center">Benefits</h3>
         <br />
-        <ul>
-          <li>Job Placement</li>
-          <li>Industrial Attachment</li>
-          <li>National Service</li>
-          <li>Enrollment at Level 200 for a Degree Programme</li>
+        <ul class="list-group">
+          <li class="list-group-item">Job Placement</li>
+          <li class="list-group-item">Industrial Attachment</li>
+          <li class="list-group-item">National Service</li>
+          <li class="list-group-item">Enrollment at Level 200 for a Degree Programme</li>
         </ul>
       </div>
-      <br />
-      <div class='footercontainer'>
-            <div class='mapcontact'>
-                <iframe
-                    title="school-location"
-                    id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=Amakom%20Traffic%20Light&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                ></iframe>
-                <br />
-                <div class='locationcontact'>
-                    <h4 class='amakom'>Location : Amakom near the traffic light</h4>
-                    <h4 class='amakom'>Call us on 03220005922 / 0243639994</h4>
-                </div>
-            </div>
-            <div class='cright'>
-                &copy;2021 Copyright:chriswellschool.com <small class='textmuted'>
-
-                    Havens Software Development
-                    </small>
-            </div>
-        </div>
     </div>
+  </div>
+</div>
+
+<!-- modal designing -->
+
+<div class="modal fade" id="graphicDesigning" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">PHOTOSHOP FOR BEGINNERS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="text-center">THE 6 MOST IMPORTANT FIRST STEPS</h3>
+        <br>
+        <ul class="list-group">
+          <li class="list-group-item">LEARN THE IMAGE ANALYSIS TOOLS – THE HISTOGRAM, THE EYEDROPPER, AND THE INFO
+            PALETTE</li>
+          <li class="list-group-item">
+            LEARN HOW TO STRAIGHTEN A TILTED IMAGE – USE THE RULER TO FIND THE ANGLE OF TILT
+          </li>
+          <li class="list-group-item">
+            LEARN TO CROP THE PICTURE – USE THE CROP TOOL
+          </li>
+          <li class="list-group-item">
+            LEARN TO REMOVE DUST MARKS AND BLEMISHES – USE THE HEALING BRUSH AND THE CLONE STAMP TOOLS
+
+          </li>
+          <li class="list-group-item">
+            LEARN TO CORRECT THE TONAL VALUES – USE THE LEVELS COMMAND
+          </li>
+          <li class="list-group-item">
+            LEARN TO REMOVE COLOUR CASTS – USE THE COLOUR BALANCE COMMAND
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal programming -->
+<div class="modal fade" id="programming" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Programming and Development</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>You may already have used software, perhaps for word processing or spreadsheets, to solve problems. Perhaps
+          now you are
+          curious to learn how programmers write software. A program is a set of step-by-step instructions that directs
+          the
+          computer to do the tasks you want it to do and produce the results you want.</p>
+        <p>There are so many programming languages out there to choose from.We will be telling you all about it when you
+          come to class.</p>
+        <p>Our main focus is on web and mobile app development.Sharing your ideas to the world through code.Can't wait
+          to see you in class</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 {% endblock %}

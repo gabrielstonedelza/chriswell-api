@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'chriswellschool/images/chriswell-ico.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/bootstrap.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/mdb.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/all.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/animate.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/navigation.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/home.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/register.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/courses.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/contactus.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'chriswellschool/css/lightbox.min.css'%}" type="text/css">
+    <title>
+        {% block title %} {% endblock %}
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xs-6 col-sm-6 col-md-6 ml-auto mr-auto">
+                {% if message %}
+                <div class="animated bounce alert alert-{{ message.tags }}" style="font-weight: bold; padding: 20px;">
+                    {{ message }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+    <script src="{% static 'chriswellschool/js/jquery-3.4.1.min.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/mdb.min.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/popper.min.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/jscode.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/all.min.js'%}"></script>
+    <script src="{% static 'chriswellschool/js/lightbox-plus-jquery.min.js'%}"></script>
+</body>
+
+</html>

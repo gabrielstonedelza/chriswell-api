@@ -5,8 +5,7 @@ nav {
   height: 90px;
   position: fixed;
   z-index: 4;
-  background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
-  background-image: linear-gradient(to right, #f5d020, #f57803);
+  background: #3b1f91;
 }
 
 nav .navigationitems {
@@ -67,23 +66,22 @@ nav .navigationitems .forright ul li {
   text-align: center;
 }
 
-nav .navigationitems .forright ul li .sitelink {
-  background-image: -webkit-gradient(linear, left top, right top, from(#f57803), to(#f5d020));
-  background-image: linear-gradient(to right, #f57803, #f5d020);
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
+nav .navigationitems .forright ul li a {
+  font-size: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: white;
+  -webkit-transition: 1.5 ease;
+  transition: 1.5 ease;
 }
 
-nav .navigationitems .forright ul li .sitelink:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
-  background-image: linear-gradient(to right, #f5d020, #f57803);
-  color: white;
+nav .navigationitems .forright ul li a:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#3b1f91), to(#f5d020));
+  background-image: linear-gradient(to right, #3b1f91, #f5d020);
 }
 
 @media (max-width: 700px) {
@@ -94,8 +92,7 @@ nav .navigationitems .forright ul li .sitelink:hover {
     height: 90px;
     position: fixed;
     z-index: 4;
-    background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
-    background-image: linear-gradient(to right, #f5d020, #f57803);
+    background-image: #3b1f91;
   }
   nav .navigationitems {
     display: -webkit-box;
@@ -141,8 +138,7 @@ nav .navigationitems .forright ul li .sitelink:hover {
     text-align: center;
   }
   nav .navigationitems .forright ul li .sitelink {
-    background-image: -webkit-gradient(linear, left top, right top, from(#f57803), to(#f5d020));
-    background-image: linear-gradient(to right, #f57803, #f5d020);
+    background: #3b1f91;
     text-decoration: none;
     font-weight: bold;
     color: white;
@@ -152,11 +148,6 @@ nav .navigationitems .forright ul li .sitelink:hover {
     padding-bottom: 5px;
     border-radius: 10px;
     font-size: 15px;
-  }
-  nav .navigationitems .forright ul li .sitelink:hover {
-    background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
-    background-image: linear-gradient(to right, #f5d020, #f57803);
-    color: white;
   }
 }
 
@@ -168,8 +159,7 @@ nav .navigationitems .forright ul li .sitelink:hover {
     height: 80px;
     position: fixed;
     z-index: 4;
-    background-image: -webkit-gradient(linear, left top, right top, from(#f5d020), to(#f57803));
-    background-image: linear-gradient(to right, #f5d020, #f57803);
+    background: #3b1f91;
   }
   nav .navigationitems {
     display: -webkit-box;
@@ -193,7 +183,10 @@ nav .navigationitems .forright ul li .sitelink:hover {
     list-style-type: none;
     gap: 1rem;
   }
-  nav .navigationitems .forsmall .iconhome, nav .navigationitems .forsmall .iconregister, nav .navigationitems .forsmall .iconcourses, nav .navigationitems .forsmall .iconcontact {
+  nav .navigationitems .forsmall .iconhome,
+  nav .navigationitems .forsmall .iconregister,
+  nav .navigationitems .forsmall .iconcourses,
+  nav .navigationitems .forsmall .iconcontact {
     color: white;
     font-size: 20px;
   }
