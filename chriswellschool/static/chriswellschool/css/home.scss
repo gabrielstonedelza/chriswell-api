@@ -45,7 +45,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(55, 55, 192, 0.274);
+    // background: rgba(55, 55, 192, 0.274);
+    background: rgba(0, 0, 0, 0.596);
   }
   .sub-nav {
     z-index: 2;
@@ -86,7 +87,7 @@ body {
 
   .header-contents {
     z-index: 2;
-    padding-top: 100px;
+    padding-top: 150px;
     h1 {
       font-size: 50px;
       margin-bottom: 0;
@@ -174,12 +175,12 @@ body {
         font-size: 40px;
         padding: 20px;
         text-align: center;
-        font-family: monospace;
+        font-family: Arial, Helvetica, sans-serif;
       }
       h3 {
         padding: 10px;
         text-align: center;
-        font-family: monospace;
+        font-family: Arial, Helvetica, sans-serif;
       }
       h4 {
         padding: 10px;
@@ -189,7 +190,7 @@ body {
         text-align: center;
         padding: 9px;
         font-size: 25px;
-        font-family: monospace;
+        font-family: Arial, Helvetica, sans-serif;
       }
     }
   }
@@ -301,6 +302,10 @@ body {
 }
 
 .entrycontainer {
+  // background-color: #3b1f91;
+  // clip-path: polygon(1% 1%, 0% 100%, 100% 100%);
+  // // position: absolute;
+  // z-index: 1;
   padding: 20px;
   h2 {
     text-align: center;

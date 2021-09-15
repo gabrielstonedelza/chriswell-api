@@ -57,7 +57,8 @@ Chriswell
   <div class="header-contents">
     <h1>Chriswell School Of Business And Technology</h1>
     <br>
-    <p>We have plenty of courses just for you to choose from.It doesn't matter where you are,you've got you covered.Just hit the button below.</p>
+    <p>We have plenty of courses just for you to choose from.It doesn't matter where you are,you've got you covered.Just
+      hit the button below.</p>
     <a href="{% url 'registration' %}">Register</a>
   </div>
 </header>
@@ -82,14 +83,27 @@ Chriswell
     <h2>What we do</h2>
     <br />
     <div class="what-we-do">
+      <div class="box ica z-depth-1-half">
+        <div class="for-img">
+          <img src="{% static 'chriswellschool/images/ica.jpeg' %}" alt="">
+        </div>
+        <div class="content">
+          <h3 class="text-center">ICA / ATSWA</h3>
+          <br>
+          <p>Chriswell school of business and technology is affiliated to Cambridge University UK.</p>
+          <br>
+          <a data-toggle="modal" data-target="#ica">Read More</a>
+        </div>
+      </div>
       <div class="box general-course z-depth-1-half">
         <div class="for-img">
           <img src="{% static 'chriswellschool/images/pexels-kampus-production-5940706.jpg' %}" alt="">
         </div>
         <div class="content">
-          <h3 class="text-center">General Courses</h3>
+          <h3 class="text-center">Professional Courses</h3>
           <br>
-          <p>We offer course like <b>GBCE</b>,<b>ABCE</b> for all levels of qualification.Hostel facilities available for
+          <p>We offer course like <b>GBCE</b>,<b>ABCE</b> for all levels of qualification.Hostel facilities available
+            for
             you.</p>
           <br>
           <a data-toggle="modal" data-target="#courses-modal">Read More</a>
@@ -102,7 +116,8 @@ Chriswell
         <div class="content">
           <h3 class="text-center">Graphic Designing</h3>
           <br>
-          <p>Get all the basics of photoshop at the tips of your fingers,the course is taught by one photoshop expert.</p>
+          <p>Get all the basics of photoshop at the tips of your fingers,the course is taught by one photoshop expert.
+          </p>
           <br>
           <a data-toggle="modal" data-target="#graphicDesigning">Read More</a>
         </div>
@@ -147,7 +162,8 @@ Chriswell
       &copy;2021 Copyright:chriswellschool.com <small class='textmuted'>
 
         Havens Software Development <span>
-          <img src="{% static 'chriswellschool/images/havens.JPG' %}" alt="" width="20" height="20" style="border-radius: 50%;">
+          <img src="{% static 'chriswellschool/images/havens.JPG' %}" alt="" width="20" height="20"
+            style="border-radius: 50%;">
         </span>
       </small>
     </div>
@@ -335,6 +351,46 @@ Chriswell
           come to class.</p>
         <p>Our main focus is on web and mobile app development.Sharing your ideas to the world through code.Can't wait
           to see you in class</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal ica -->
+<div class="modal fade" id="ica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          ICA / ATSWA
+          <a title="download document" style="font-size: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-weight: bold;
+                border-radius: 10px;
+                color: white;
+                transition: 1.5 ease;
+                background-image: linear-gradient(to right, #f5d020, #3b1f91);" target="_blank"
+            href="{% static 'chriswellschool/images/forica.JPG' %}" rel="noreferrer" class='downloadlink1 mr-1'>
+            ICA/ATSWA
+            <i class="fas fa-file-download"></i>
+          </a>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <a href="{% static 'chriswellschool/images/forica.JPG' %}" data-lightbox="gallery">
+              <img src="{% static 'chriswellschool/images/forica.JPG' %}" alt="" width="100%" >
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
